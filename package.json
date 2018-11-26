@@ -4,6 +4,12 @@
   "description": "Failure detection for processes, connections and distributed systems",
   "main": "index.js",
   "license": "MIT",
+  "repository": "aholstenson/adaptive-accrual-failure-detector",
+  "keywords": [
+    "failure detector",
+    "distributed",
+    "networking"
+  ],
   "scripts": {
     "test": "mocha tests/* && eslint ."
   },

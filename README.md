@@ -1,6 +1,9 @@
 # adaptive-accrual-failure-detector
 
-JavaScript-implementation of a failure detector that uses an adaptive accrual
+[![npm version](https://badge.fury.io/js/adaptive-accrual-failure-detector.svg)](https://badge.fury.io/js/adaptive-accrual-failure-detector)
+
+Failure detection for processes, connections and distributed systems. This is
+a JavaScript-implementation of a failure detector that uses an adaptive accrual
 algorithm. The theory of this detector is taken from the paper
 [A New Adaptive Accrual Failure Detector for Dependable Distributed System](https://www.informatik.uni-augsburg.de/lehrstuehle/sik/publikationen/papers/2007_sac-dads_sat/paper.pdf)
 authored by Benjamin Satzger, Andreas Pietzowski, Wolfang Trumler and 
