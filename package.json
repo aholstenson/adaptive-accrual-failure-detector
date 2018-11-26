@@ -1,0 +1,17 @@
+{
+  "name": "adaptive-accrual-failure-detector",
+  "version": "0.1.0",
+  "description": "Failure detection for processes, connections and distributed systems",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha tests/* && eslint ."
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "eslint-plugin-node": "^8.0.0",
+    "mocha": "^5.2.0"
+  }
+}
