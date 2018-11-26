@@ -1,6 +1,6 @@
 {
   "name": "adaptive-accrual-failure-detector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Failure detection for processes, connections and distributed systems",
   "main": "index.js",
   "license": "MIT",
