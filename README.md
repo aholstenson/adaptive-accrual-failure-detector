@@ -3,8 +3,8 @@
 [![npm version](https://badge.fury.io/js/adaptive-accrual-failure-detector.svg)](https://badge.fury.io/js/adaptive-accrual-failure-detector)
 
 Failure detection for processes, connections and distributed systems. This is
-a JavaScript-implementation of a failure detector that uses an adaptive accrual
-algorithm. The theory of this detector is taken from the paper
+an implementation for JavaScript and TypeScript of a failure detector that uses
+an adaptive accrual algorithm. The theory of this detector is taken from the paper
 [A New Adaptive Accrual Failure Detector for Dependable Distributed System](https://www.informatik.uni-augsburg.de/lehrstuehle/sik/publikationen/papers/2007_sac-dads_sat/paper.pdf)
 authored by Benjamin Satzger, Andreas Pietzowski, Wolfang Trumler and 
 Theo Ungerer.
@@ -26,13 +26,18 @@ can be used when creating the detector:
   overestimation of failure. Default is `0.9`.
 *
   `failureThreshold` - the probability needed to to detect something as a
-  failure. Default is `0.5`.
+  failure. If the probability of failure is above this the thing being 
+  monitored is considered failed. Default is `0.5`.
 
 ```javascript
-const FailureDetector = require('adaptive-accrual-failure-detector');
+// Using Node
+const { FailureDetector } = require('adaptive-accrual-failure-detector');
+
+// Using ES Module environment
+import { FailureDetector } from 'adaptive-accrual-failure-detector';
 
 const detector = new FailureDetector({
-  sampleSize: 1000
+  failureThreshold: 0.6
 });
 ```
 
@@ -42,7 +47,7 @@ When you receive a heartbeat you should call `registerHeartbeat` on the detector
 detector.registerHeartbeat();
 ```
 
-To calculate if a failure has occured you can call `checkFailure()` or
+To calculate if a failure has occurred you can call `checkFailure()` or
 `calculateFailureProbability()`:
 
 ```javascript
@@ -52,4 +57,3 @@ const isFailed = detector.checkFailure();
 // Calculate the probability of failure between 0 and 1
 const failureProbability = detector.calculateFailureProbability();
 ```
-
