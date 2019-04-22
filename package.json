@@ -1,6 +1,6 @@
 {
   "name": "adaptive-accrual-failure-detector",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Failure detection for processes, connections and distributed systems",
   "license": "MIT",
   "repository": "aholstenson/adaptive-accrual-failure-detector",
