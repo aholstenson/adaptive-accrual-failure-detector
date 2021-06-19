@@ -30,9 +30,6 @@ can be used when creating the detector:
   monitored is considered failed. Default is `0.5`.
 
 ```javascript
-// Using Node
-const { FailureDetector } = require('adaptive-accrual-failure-detector');
-
 // Using ES Module environment
 import { FailureDetector } from 'adaptive-accrual-failure-detector';
 
